@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  
+  <title>Frontend Mentor | Job Listings</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div id="filter-bar" class="hidden">
+      <div id="selected-filters">
+        <div class="delete-filters">
+          <p>Frontend</p>
+          <button><img src="images/icon-remove.svg" alt="remove-icon"></button>
+        </div>
+        <div class="delete-filters">
+          <p>CSS</p>
+          <button><img src="images/icon-remove.svg" alt="remove-icon"></button>
+        </div>
+        <div class="delete-filters">
+          <p>JavaScript</p>
+          <button><img src="images/icon-remove.svg" alt="remove-icon"></button>
+        </div>
+      </div>
+      <button id="clear-filters">Clear</button>
+    </div>
+  </header>
+
+  <main id="job-listings">
+    <article>
+      <div class="profile-tag">
+            <figure>
+                <img src="images/photosnap.svg" alt="photosnap">
+            </figure>
+            <div class="job-content">
+                <div class="company-header">
+                    <span class="company-name">Photosnap</span>
+                    <span class="badge new">NEW!</span>
+                    <span class="badge featured">FEATURED</span>
+                </div>
+                <h2 class="job-title">Senior Frontend Developer</h2>
+                <div class="job-meta">
+                    <span>1d ago</span>
+                    <span>•</span>
+                    <span>Full Time</span>
+                    <span>•</span>
+                    <span>USA only</span>
+                </div>
+            </div>
+      </div> 
+      <div class="job-tags">
+        <span class="tag">Frontend</span>
+        <span class="tag">Senior</span>
+        <span class="tag">HTML</span>
+        <span class="tag">CSS</span>
+        <span class="tag">JavaScript</span>
+      </div>
+    </article>
+
+    <article>
+      <div class="profile-tag">
+            <figure>
+                <img src="images/photosnap.svg" alt="photosnap">
+            </figure>
+            <div class="job-content">
+                <div class="company-header">
+                    <span class="company-name">Manage</span>
+                    <span class="badge new">NEW!</span>
+                    <span class="badge featured">FEATURED</span>
+                </div>
+                <h2 class="job-title">Fullstack Developer</h2>
+                <div class="job-meta">
+                    <span>1d ago</span>
+                    <span>•</span>
+                    <span>Part Time</span>
+                    <span>•</span>
+                    <span>Remote</span>
+                </div>
+        </div>
+      </div> 
+      <div class="job-tags">
+        <span class="tag">Frontend</span>
+        <span class="tag">Midweight</span>
+        <span class="tag">Python</span>
+        <span class="tag">React</span>
+      </div>
+    </article>
+  </main>
+ 
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="#">Frances Iyamu</a>.
+  </div>
+</body>
+</html>
