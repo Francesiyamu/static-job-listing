@@ -3,11 +3,23 @@ $colors: (
     "green-50" : hsl(180, 52%, 96%),
     "Gray-400" :  hsl(180, 8%, 52%),
     "Green-900" : hsl(180, 14%, 20%),
-    "blue" : hsl(228, 45%, 44%)
+    "blue" : hsl(228, 45%, 44%),
+    "white" : #fff
 );
 
 $font-weights: (
     "bold" : 700,
     "medium" : 500
-)
+);
+
+@function color($color-type) {
+    @return map-get($map: $colors, $key: $color-type)
+}
+
+@mixin flexCenter($justify){
+    display: flex;
+    justify-content: $justify;
+    align-items: center;
+}
+
 

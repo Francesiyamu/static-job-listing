@@ -9,25 +9,88 @@
     box-sizing: border-box;
 }
 
+html{
+    height: 100%;
+    scroll-behavior: smooth;
+}
 
 
 body {
   line-height: 1.5;
-  font-family: "League Spartan", sans-serif;;
+  font-family: "League Spartan", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-rendering: optimizeSpeed;
   font-optical-sizing: auto;
   font-style: normal;
-  background-color: map-get($map: $colors, $key: "green-50" ); 
+  background-color: color("green-50");
 }
 
 header{
     width: 100%;
     max-width: 1440px;
-    background-color: map-get($map: $colors, $key: "green");
-    background-image: url(/static-job-listings-master/images/bg-header-desktop.svg);
+    height: auto;
+    background-color: color("green");
+    position: relative;
 }
+
+.hidden{
+        @include flexCenter(space-between);
+        width: 70%;
+        margin: 0 auto;
+        background-color: color("white");
+        border-radius: 5px;
+        padding: 1em;
+        position: absolute;
+        top: 24%;
+        left: 15%;
+        .filtered-items{
+           @include flexCenter(space-between);
+            gap: 20px;
+
+           .delete-filters{
+            @include flexCenter(space-between);
+            gap: 5px;
+            
+            p{
+                background-color: lighten(color("green"), 45%);
+                color: color("green");
+            }
+
+            button{
+                background-color: color("green");
+                border: none;
+                outline: none;
+                padding: 0.4em;
+
+                &:hover{
+                    background-color: color("Green-900");
+                    cursor: pointer;
+                }
+
+                img{
+                    display: block;
+                    max-width: 100%;
+                    
+                }
+            }
+           }
+        }
+
+        .clear-btn{
+            color: color("green");
+            border: none;
+            outline: none;
+            background-color: transparent;
+            cursor: pointer;
+            font-weight: map-get($map: $font-weights, $key: "bold");
+
+            &:hover{
+                background-color: lighten(color("green"), 40%);
+                padding: 0.5em;
+            }
+        }
+    }
 
 
 .attribution { 

@@ -14,24 +14,29 @@
 <body>
 
   <header>
-    <div id="filter-bar" class="hidden">
-      <div id="selected-filters">
+    <picture>
+      <source media="(max-width = 450px)" srcset="/static-job-listings-master/images/bg-header-mobile.svg">
+      <img src="images/bg-header-desktop.svg" alt="" width="1440px" height="156">
+    </picture>
+  </header>
+
+  <div id="filter-bar" class="hidden">
+      <div id="selected-filters" class="filtered-items">
         <div class="delete-filters">
-          <p>Frontend</p>
+          <p class="paragraph">Frontend</p>
           <button><img src="images/icon-remove.svg" alt="remove-icon"></button>
         </div>
         <div class="delete-filters">
           <p>CSS</p>
-          <button><img src="images/icon-remove.svg" alt="remove-icon"></button>
+          <button><img src="images/icon-remove.svg" alt="remove-icon" width="13" height="14" ></button>
         </div>
         <div class="delete-filters">
           <p>JavaScript</p>
           <button><img src="images/icon-remove.svg" alt="remove-icon"></button>
         </div>
       </div>
-      <button id="clear-filters">Clear</button>
+      <button id="clear-filters" class="clear-btn">Clear</button>
     </div>
-  </header>
 
   <main id="job-listings">
     <article>

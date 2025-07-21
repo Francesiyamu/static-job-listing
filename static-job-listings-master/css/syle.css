@@ -6,6 +6,11 @@
   box-sizing: border-box;
 }
 
+html {
+  height: 100%;
+  scroll-behavior: smooth;
+}
+
 body {
   line-height: 1.5;
   font-family: "League Spartan", sans-serif;
@@ -20,8 +25,65 @@ body {
 header {
   width: 100%;
   max-width: 1440px;
+  height: auto;
   background-color: hsl(180, 29%, 50%);
-  background-image: url(/static-job-listings-master/images/bg-header-desktop.svg);
+  position: relative;
+}
+
+.hidden {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 70%;
+  margin: 0 auto;
+  background-color: #fff;
+  border-radius: 5px;
+  padding: 1em;
+  position: absolute;
+  top: 24%;
+  left: 15%;
+}
+.hidden .filtered-items {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+}
+.hidden .filtered-items .delete-filters {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 5px;
+}
+.hidden .filtered-items .delete-filters p {
+  background-color: #eff6f6;
+  color: hsl(180, 29%, 50%);
+}
+.hidden .filtered-items .delete-filters button {
+  background-color: hsl(180, 29%, 50%);
+  border: none;
+  outline: none;
+  padding: 0.4em;
+}
+.hidden .filtered-items .delete-filters button:hover {
+  background-color: hsl(180, 14%, 20%);
+  cursor: pointer;
+}
+.hidden .filtered-items .delete-filters button img {
+  display: block;
+  max-width: 100%;
+}
+.hidden .clear-btn {
+  color: hsl(180, 29%, 50%);
+  border: none;
+  outline: none;
+  background-color: transparent;
+  cursor: pointer;
+  font-weight: 700;
+}
+.hidden .clear-btn:hover {
+  background-color: #deeded;
+  padding: 0.5em;
 }
 
 .attribution {
